@@ -21,6 +21,15 @@ namespace shapes_2
         {
             this.b = b;
         }
+        public void get_a(double a)
+        {
+            this.a = a;
+        }
+        public void get_h(double h) 
+        {
+            this.h = h;
+        }
+
         public void get_type(int type)
         {
             this.type = type;
