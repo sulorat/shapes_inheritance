@@ -14,6 +14,7 @@
             {
                 while (true)
                 {
+
                     Console.Clear();
                     Console.WriteLine("Q - circle\nW - square\nE - rectangle\nR - triangle\nT - pyramid");
                     ConsoleKey key = Console.ReadKey().Key;
@@ -22,6 +23,7 @@
                     {
                         case ConsoleKey.Q:
                             {
+                                Console.Clear ();
                                 Console.WriteLine("Enter radius circle");
                                 double circl_radius = double.Parse(Console.ReadLine());
                                 circle.get_r(circl_radius);
@@ -34,6 +36,7 @@
                             }
                         case ConsoleKey.W:
                             {
+                                Console.Clear();
                                 Console.WriteLine("Enter side A for square ");
                                 double side_square = double.Parse(Console.ReadLine());
                                 square.get_a(side_square);
@@ -46,6 +49,7 @@
                             }
                         case ConsoleKey.E:
                             {
+                                Console.Clear();
                                 Console.WriteLine("Enter side A for rectangle");
                                 double side_a_rectangle = double.Parse(Console.ReadLine());
                                 Console.WriteLine("Enter side B for rectangle");
@@ -61,6 +65,7 @@
                             }
                         case ConsoleKey.R:
                             {
+                                Console.Clear();
                                 Console.WriteLine("Enter side 1 for triangle");
                                 double side_a_triangle = double.Parse(Console.ReadLine());
                                 Console.WriteLine("Enter side 2 for triangle");
@@ -75,8 +80,9 @@
                                 triangle.get_h(height);
                                 if ((side_a_triangle > 0) && (side_b_triangle > 0) && (side_c_triangle > 0))
                                 {
-                                    if ((side_a_triangle + side_b_triangle < side_c_triangle) || (side_c_triangle + side_b_triangle < side_a_triangle) && (side_a_triangle + side_c_triangle < side_b_triangle))
+                                    if ((side_a_triangle + side_b_triangle <= side_c_triangle) || (side_c_triangle + side_b_triangle <= side_a_triangle) || (side_a_triangle + side_c_triangle <= side_b_triangle))
                                     {
+                                        Console.Clear();
                                         Console.WriteLine("Triangle is not exist");
                                         Console.WriteLine("Press any button to continue");
                                         Console.ReadKey();
@@ -134,11 +140,12 @@
                                 double piramida;
                                 Console.WriteLine("Which type of piramida?\nA - square piramida\nS - Circle piramida\nD - triangle piramida");
                                 ConsoleKey need_key = Console.ReadKey().Key;
+                                Console.Clear();
                                 switch (need_key)
                                 {
                                     case ConsoleKey.A:
+                                        
                                         {
-                                            Console.WriteLine();
                                             Console.WriteLine("Enter side of square");
                                             double side_a_square = double.Parse(Console.ReadLine());
                                             Console.WriteLine("Enter apopheme ");
@@ -153,8 +160,7 @@
                                         }
                                         case ConsoleKey.S:
                                         {
-                                            Console.WriteLine();
-                                            Console.WriteLine("Enter height of lateral face");
+                                            Console.WriteLine("Enter apopheme");
                                             double l = double.Parse(Console.ReadLine());
                                             Console.WriteLine("Enter radius of circle");
                                             double radius = double.Parse(Console.ReadLine());
@@ -165,7 +171,6 @@
                                         }
                                         case ConsoleKey.D: 
                                         {
-                                            Console.WriteLine();
                                             triangle.get_type(1);
                                             Console.WriteLine("Enter side of footing triangle");
                                             triangle.get_a(double.Parse(Console.ReadLine()));
