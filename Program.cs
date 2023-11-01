@@ -54,8 +54,7 @@
                                 double side_a_rectangle = double.Parse(Console.ReadLine());
                                 Console.WriteLine("Enter side B for rectangle");
                                 double side_b_rectangle = double.Parse(Console.ReadLine());
-                                rectangle.get_b(side_b_rectangle);
-                                rectangle.get_a(side_a_rectangle);
+                                rectangle.get_ab(side_a_rectangle,side_b_rectangle);
                                 Console.Clear();
                                 Console.WriteLine("Perimetr of rectangle: " + rectangle.perimetr_found());
                                 Console.WriteLine("Area of rectangle: " + rectangle.area_found());
@@ -74,10 +73,7 @@
                                 double side_c_triangle = double.Parse(Console.ReadLine());
                                 Console.WriteLine("Enter height for triangle");
                                 double height = double.Parse(Console.ReadLine());
-                                triangle.get_a(side_a_triangle);
-                                triangle.get_b(side_b_triangle);
-                                triangle.get_c(side_c_triangle);
-                                triangle.get_h(height);
+                                triangle.get_a_b_c_h(side_a_triangle,side_b_triangle,side_c_triangle, height);
                                 if ((side_a_triangle > 0) && (side_b_triangle > 0) && (side_c_triangle > 0))
                                 {
                                     if ((side_a_triangle + side_b_triangle <= side_c_triangle) || (side_c_triangle + side_b_triangle <= side_a_triangle) || (side_a_triangle + side_c_triangle <= side_b_triangle))

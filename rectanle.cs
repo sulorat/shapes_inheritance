@@ -9,12 +9,9 @@ namespace shapes_2
     internal class rectangle : shape
     {
         private double a, b;
-        public void get_a(double a)
+        public void get_ab(double a,double b)
         {
             this.a = a;
-        }
-        public void get_b(double b)
-        {
             this.b = b;
         }
         public override double perimetr_found()

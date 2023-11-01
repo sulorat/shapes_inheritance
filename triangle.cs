@@ -10,26 +10,20 @@ namespace shapes_2
     {
         private double a, b, c, h;
         private int type;
-        public void get_a(double a)
+        public void get_a_b_c_h(double a, double b, double c, double h)
         {
             this.a = a;
+            this.b = b;
+            this.c = c;
+            this.h = h;
         }
         public void get_b(double b)
         {
             this.b = b;
         }
-
-        public void get_c(double c)
-        {
-            this.c = c;
-        }
         public void get_type(int type)
         {
             this.type = type;
-        }
-        public void get_h(double h)
-        {
-            this.h = h;
         }
         public override double perimetr_found()
         {
